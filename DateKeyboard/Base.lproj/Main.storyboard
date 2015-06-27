@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oRx-D7-dnD">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--設定-->
+        <scene sceneID="88Q-TW-CCL">
+            <objects>
+                <tableViewController id="BHI-Hj-r8J" customClass="SettingTableViewController" customModule="DateKeyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="dd7-GA-tZY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="一般" id="xWa-H0-oFM">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="7ve-gy-NMC">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7ve-gy-NMC" id="Xqn-Tt-1dK">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="書式をカスタマイズする" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7u-5g-e8H">
+                                                    <rect key="frame" x="13" y="11" width="187" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mfa-1B-SP3">
+                                                    <rect key="frame" x="538" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="formatSwitched:" destination="BHI-Hj-r8J" eventType="valueChanged" id="Pg6-od-CC5"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="Mfa-1B-SP3" secondAttribute="centerY" id="BYq-of-Imt"/>
+                                                <constraint firstItem="Mfa-1B-SP3" firstAttribute="top" secondItem="Xqn-Tt-1dK" secondAttribute="topMargin" id="D1z-EM-0YO"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Mfa-1B-SP3" secondAttribute="bottom" id="Ddz-a9-rjo"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Mfa-1B-SP3" secondAttribute="trailing" constant="5" id="OFj-hE-5zS"/>
+                                                <constraint firstAttribute="centerY" secondItem="A7u-5g-e8H" secondAttribute="centerY" id="dhf-H8-U9g"/>
+                                                <constraint firstItem="A7u-5g-e8H" firstAttribute="leading" secondItem="Xqn-Tt-1dK" secondAttribute="leadingMargin" constant="5" id="raL-FV-8Zz"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="D1z-EM-0YO"/>
+                                                    <exclude reference="Ddz-a9-rjo"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="U6p-7c-2ed">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U6p-7c-2ed" id="fyB-lk-pMp">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英語表記を使う" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgS-Fv-Jef">
+                                                    <rect key="frame" x="13" y="11" width="119" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JEh-Qb-MVe">
+                                                    <rect key="frame" x="538" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="englishFormatSwitched:" destination="BHI-Hj-r8J" eventType="valueChanged" id="lnQ-6y-RfH"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="JEh-Qb-MVe" secondAttribute="bottom" id="SaV-td-60y"/>
+                                                <constraint firstItem="JEh-Qb-MVe" firstAttribute="top" secondItem="fyB-lk-pMp" secondAttribute="topMargin" id="TXC-Wr-iLd"/>
+                                                <constraint firstAttribute="centerY" secondItem="JEh-Qb-MVe" secondAttribute="centerY" id="Xmq-IN-NOy"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="JEh-Qb-MVe" secondAttribute="trailing" constant="5" id="e0j-7I-yIo"/>
+                                                <constraint firstItem="fgS-Fv-Jef" firstAttribute="leading" secondItem="fyB-lk-pMp" secondAttribute="leadingMargin" constant="5" id="gUL-Vt-sOQ"/>
+                                                <constraint firstAttribute="centerY" secondItem="fgS-Fv-Jef" secondAttribute="centerY" id="uo3-lG-3Sf"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="SaV-td-60y"/>
+                                                    <exclude reference="TXC-Wr-iLd"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="高度な書式設定" id="sX0-EX-FDu">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="3CR-2B-O3F">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3CR-2B-O3F" id="QDV-Yx-8SS">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="年月日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5D-5S-mKN">
+                                                    <rect key="frame" x="13" y="11" width="51" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WKL-Ua-tWz">
+                                                    <rect key="frame" x="74" y="8" width="513" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <connections>
+                                                        <action selector="textFieldOnExit:" destination="BHI-Hj-r8J" eventType="editingDidEndOnExit" id="gdS-9j-jWq"/>
+                                                        <action selector="yearMonthDayChanged:" destination="BHI-Hj-r8J" eventType="valueChanged" id="9QD-4b-nHi"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="WKL-Ua-tWz" secondAttribute="bottom" id="124-I3-TSq"/>
+                                                <constraint firstAttribute="centerY" secondItem="WKL-Ua-tWz" secondAttribute="centerY" id="DJm-r8-owA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="WKL-Ua-tWz" secondAttribute="trailing" constant="5" id="Ha6-Io-nZu"/>
+                                                <constraint firstItem="WKL-Ua-tWz" firstAttribute="top" secondItem="QDV-Yx-8SS" secondAttribute="topMargin" id="TNf-ZR-PQS"/>
+                                                <constraint firstItem="WKL-Ua-tWz" firstAttribute="leading" secondItem="a5D-5S-mKN" secondAttribute="trailing" constant="10" id="mH8-Fh-zHl"/>
+                                                <constraint firstItem="a5D-5S-mKN" firstAttribute="leading" secondItem="QDV-Yx-8SS" secondAttribute="leadingMargin" constant="5" id="qCD-pH-oXr"/>
+                                                <constraint firstAttribute="centerY" secondItem="a5D-5S-mKN" secondAttribute="centerY" id="rYq-Yo-94n"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="fFe-tR-SsD">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fFe-tR-SsD" id="bEH-RA-cqS">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="年月日と曜日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OE1-nL-XK9">
+                                                    <rect key="frame" x="13" y="11" width="102" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IfO-V1-tRf">
+                                                    <rect key="frame" x="125" y="8" width="462" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <connections>
+                                                        <action selector="textFieldOnExit:" destination="BHI-Hj-r8J" eventType="editingDidEndOnExit" id="eoq-JZ-uxS"/>
+                                                        <action selector="yearMonthDayWeekdayChanged:" destination="BHI-Hj-r8J" eventType="valueChanged" id="5NE-vw-Vhd"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="IfO-V1-tRf" secondAttribute="trailing" constant="5" id="4qp-uL-SNr"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="IfO-V1-tRf" secondAttribute="bottom" id="EOX-iu-xwd"/>
+                                                <constraint firstItem="IfO-V1-tRf" firstAttribute="leading" secondItem="OE1-nL-XK9" secondAttribute="trailing" constant="10" id="KfT-jj-BMg"/>
+                                                <constraint firstItem="IfO-V1-tRf" firstAttribute="top" secondItem="bEH-RA-cqS" secondAttribute="topMargin" id="cYt-45-VVZ"/>
+                                                <constraint firstAttribute="centerY" secondItem="OE1-nL-XK9" secondAttribute="centerY" id="dhS-nt-QUp"/>
+                                                <constraint firstItem="OE1-nL-XK9" firstAttribute="leading" secondItem="bEH-RA-cqS" secondAttribute="leadingMargin" constant="5" id="x15-BC-UgH"/>
+                                                <constraint firstAttribute="centerY" secondItem="IfO-V1-tRf" secondAttribute="centerY" id="z1d-0v-eLo"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="xbt-Hy-JfJ">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xbt-Hy-JfJ" id="rnU-YK-JUn">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2F-Pe-2bN">
+                                                    <rect key="frame" x="13" y="11" width="34" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CWH-bL-Icq">
+                                                    <rect key="frame" x="57" y="8" width="530" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <connections>
+                                                        <action selector="monthDayChanged:" destination="BHI-Hj-r8J" eventType="valueChanged" id="mZa-W1-afb"/>
+                                                        <action selector="textFieldOnExit:" destination="BHI-Hj-r8J" eventType="editingDidEndOnExit" id="v5k-CF-W0R"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="CWH-bL-Icq" secondAttribute="trailing" constant="5" id="11Z-ds-QXj"/>
+                                                <constraint firstItem="CWH-bL-Icq" firstAttribute="leading" secondItem="O2F-Pe-2bN" secondAttribute="trailing" constant="10" id="1Ij-Wy-3uw"/>
+                                                <constraint firstAttribute="centerY" secondItem="CWH-bL-Icq" secondAttribute="centerY" id="5Jv-B5-2gS"/>
+                                                <constraint firstItem="CWH-bL-Icq" firstAttribute="trailing" secondItem="rnU-YK-JUn" secondAttribute="trailingMargin" constant="5" id="GJw-4f-ALi"/>
+                                                <constraint firstAttribute="centerY" secondItem="O2F-Pe-2bN" secondAttribute="centerY" id="Uxp-ZV-Ir6"/>
+                                                <constraint firstItem="O2F-Pe-2bN" firstAttribute="leading" secondItem="rnU-YK-JUn" secondAttribute="leadingMargin" constant="5" id="gPR-dq-q5y"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="CWH-bL-Icq" secondAttribute="bottom" id="nXM-2Z-GTG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="CWH-bL-Icq" secondAttribute="trailing" constant="5" id="uPZ-4q-xvt"/>
+                                                <constraint firstItem="CWH-bL-Icq" firstAttribute="top" secondItem="rnU-YK-JUn" secondAttribute="topMargin" id="wLe-Im-WYt"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="GJw-4f-ALi"/>
+                                                    <exclude reference="uPZ-4q-xvt"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="vRb-d1-5YM">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vRb-d1-5YM" id="2Ew-UK-hSm">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ctD-g1-Xbc">
+                                                    <rect key="frame" x="108" y="8" width="479" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="zFj-w6-yZk"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="zFj-w6-yZk"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="monthDayWeekdayChanged:" destination="BHI-Hj-r8J" eventType="valueChanged" id="Pp6-uU-7wv"/>
+                                                        <action selector="textFieldOnExit:" destination="BHI-Hj-r8J" eventType="editingDidEndOnExit" id="KpA-Qz-63p"/>
+                                                    </connections>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月日と曜日" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="UVv-IE-1yP">
+                                                    <rect key="frame" x="13" y="11" width="85" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="UVv-IE-1yP" secondAttribute="centerY" id="5aQ-Oj-D8x"/>
+                                                <constraint firstItem="ctD-g1-Xbc" firstAttribute="trailing" secondItem="2Ew-UK-hSm" secondAttribute="trailingMargin" constant="5" id="7OQ-zT-9gq"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ctD-g1-Xbc" secondAttribute="bottom" id="DBO-gp-vsx"/>
+                                                <constraint firstAttribute="centerY" secondItem="ctD-g1-Xbc" secondAttribute="centerY" id="GJ4-m7-1Ks"/>
+                                                <constraint firstItem="UVv-IE-1yP" firstAttribute="leading" secondItem="2Ew-UK-hSm" secondAttribute="leadingMargin" constant="5" id="S8z-4m-iYQ"/>
+                                                <constraint firstItem="ctD-g1-Xbc" firstAttribute="leading" secondItem="UVv-IE-1yP" secondAttribute="trailing" constant="10" id="l6r-BK-UHV"/>
+                                                <constraint firstItem="ctD-g1-Xbc" firstAttribute="top" secondItem="2Ew-UK-hSm" secondAttribute="topMargin" id="txE-83-wOP"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ctD-g1-Xbc" secondAttribute="trailing" constant="5" id="xEh-Gm-Ual"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="7OQ-zT-9gq"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="1pt-CP-apg">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1pt-CP-apg" id="Lbe-SV-dnn">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AYm-VA-bcW">
+                                                    <rect key="frame" x="57" y="8" width="530" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="0Jg-Om-qdu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <connections>
+                                                        <action selector="textFieldOnExit:" destination="BHI-Hj-r8J" eventType="editingDidEndOnExit" id="ILf-EQ-sD7"/>
+                                                        <action selector="timeChanged:" destination="BHI-Hj-r8J" eventType="valueChanged" id="vtW-nS-xgO"/>
+                                                    </connections>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="時間" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="YG3-sk-TQU">
+                                                    <rect key="frame" x="13" y="11" width="34" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="AYm-VA-bcW" secondAttribute="centerY" id="2He-C4-4z9"/>
+                                                <constraint firstItem="AYm-VA-bcW" firstAttribute="trailing" secondItem="Lbe-SV-dnn" secondAttribute="trailingMargin" constant="5" id="3BF-Og-jYJ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="AYm-VA-bcW" secondAttribute="bottom" id="CQY-Xy-joC"/>
+                                                <constraint firstAttribute="centerY" secondItem="YG3-sk-TQU" secondAttribute="centerY" id="EEd-Z2-5dK"/>
+                                                <constraint firstItem="AYm-VA-bcW" firstAttribute="leading" secondItem="YG3-sk-TQU" secondAttribute="trailing" constant="10" id="XTY-RZ-YwU"/>
+                                                <constraint firstItem="YG3-sk-TQU" firstAttribute="leading" secondItem="Lbe-SV-dnn" secondAttribute="leadingMargin" constant="5" id="gQX-Wf-cr8"/>
+                                                <constraint firstItem="AYm-VA-bcW" firstAttribute="top" secondItem="Lbe-SV-dnn" secondAttribute="topMargin" id="grG-ia-Pcc"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="AYm-VA-bcW" secondAttribute="trailing" constant="5" id="jTV-25-ZhG"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="3BF-Og-jYJ"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="9zc-UK-7tw">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9zc-UK-7tw" id="Hov-Q3-Fid">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sgm-fv-L2i">
+                                                    <rect key="frame" x="8" y="8" width="584" height="363"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="217" id="3pA-Qs-tQq"/>
+                                                        <constraint firstAttribute="height" constant="217" id="pBa-3u-ZFh"/>
+                                                    </constraints>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="ここで使用することのできる書式は、">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="W3C-DTF">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="と呼ばれるもので、">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
+G    </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="時代">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="(AD">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="等">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">)
+yy    </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="年">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="(">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="下">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="2">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="桁のみ">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">)
+yyyy    </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="年">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
+MM    </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="月">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
+MMM    </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="月">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="(">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="英語表記時のみ、">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Jan">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="など">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">)
+MMMM    </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="月">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="(">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="英語表記時のみ、">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="January">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="など">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">)
+d    </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="日">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
+dd    </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="日">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="(2">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="桁">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">)
+H    </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="時">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
+HH    </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="時">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="(2">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="桁）">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
+m    </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="分">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
+mm    </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="分">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="(2">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="桁">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">)
+</string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="などになります。">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                                                <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="3pA-Qs-tQq"/>
+                                                            <exclude reference="pBa-3u-ZFh"/>
+                                                        </mask>
+                                                    </variation>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="sgm-fv-L2i" secondAttribute="bottom" id="CQY-rY-orb"/>
+                                                <constraint firstItem="sgm-fv-L2i" firstAttribute="leading" secondItem="Hov-Q3-Fid" secondAttribute="leadingMargin" id="bft-NW-DoO"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="sgm-fv-L2i" secondAttribute="trailing" id="geZ-Te-g1H"/>
+                                                <constraint firstItem="sgm-fv-L2i" firstAttribute="top" secondItem="Hov-Q3-Fid" secondAttribute="topMargin" id="ztW-6u-Byn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="BHI-Hj-r8J" id="dzY-sh-qt8"/>
+                            <outlet property="delegate" destination="BHI-Hj-r8J" id="epP-yu-tD0"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="設定" image="settings-02-icon_32x32px" id="l0A-NE-Ijv"/>
+                    <connections>
+                        <outlet property="englishSwitch" destination="JEh-Qb-MVe" id="RXS-xF-bI2"/>
+                        <outlet property="explanationCell" destination="9zc-UK-7tw" id="HqI-AN-Se2"/>
+                        <outlet property="explanationTextLabel" destination="sgm-fv-L2i" id="0nV-qS-N7P"/>
+                        <outlet property="formatCustomizeSwitch" destination="Mfa-1B-SP3" id="qpw-5j-1Dq"/>
+                        <outlet property="monthDayCell" destination="xbt-Hy-JfJ" id="2FI-zQ-Ls2"/>
+                        <outlet property="monthDayTextField" destination="CWH-bL-Icq" id="vho-p6-z2y"/>
+                        <outlet property="monthDayWeekdayCell" destination="vRb-d1-5YM" id="aLb-jT-gA1"/>
+                        <outlet property="monthDayWeekdayTextField" destination="ctD-g1-Xbc" id="wUo-jh-zWy"/>
+                        <outlet property="timeCell" destination="1pt-CP-apg" id="A7P-Io-2fi"/>
+                        <outlet property="timeTextField" destination="AYm-VA-bcW" id="upn-Vf-bhV"/>
+                        <outlet property="yearMonthDayCell" destination="3CR-2B-O3F" id="Pki-oH-xm0"/>
+                        <outlet property="yearMonthDayTextField" destination="WKL-Ua-tWz" id="EeC-Vn-ZR0"/>
+                        <outlet property="yearMonthDayWeekdayCell" destination="fFe-tR-SsD" id="oRv-ck-3fh"/>
+                        <outlet property="yearMonthDayWeekdayTextField" destination="IfO-V1-tRf" id="a1B-zE-KA7"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bCb-Jw-wSZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7Av-Zx-HiC">
+                    <connections>
+                        <action selector="onTap:" destination="BHI-Hj-r8J" id="guw-lV-qJK"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-867" y="1010"/>
+        </scene>
+        <!--アプリについて-->
+        <scene sceneID="Q1l-OY-SUd">
+            <objects>
+                <viewController id="gF2-az-lXt" customClass="AboutThisAppViewController" customModule="DateKeyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gy3-Zb-tsR"/>
+                        <viewControllerLayoutGuide type="bottom" id="P4f-rp-KIP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kLM-mv-T09">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zLr-7p-Vfv">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zLr-7p-Vfv" firstAttribute="trailing" secondItem="kLM-mv-T09" secondAttribute="trailingMargin" id="4dX-ET-rSx"/>
+                            <constraint firstItem="zLr-7p-Vfv" firstAttribute="top" secondItem="kLM-mv-T09" secondAttribute="topMargin" id="5BL-Hj-6Oh"/>
+                            <constraint firstItem="zLr-7p-Vfv" firstAttribute="leading" secondItem="kLM-mv-T09" secondAttribute="leadingMargin" id="9ce-tZ-xaE"/>
+                            <constraint firstItem="P4f-rp-KIP" firstAttribute="top" secondItem="zLr-7p-Vfv" secondAttribute="bottom" id="FZI-Z0-kfK"/>
+                            <constraint firstItem="zLr-7p-Vfv" firstAttribute="top" secondItem="gy3-Zb-tsR" secondAttribute="bottom" id="OvX-hJ-jIh"/>
+                            <constraint firstAttribute="trailing" secondItem="zLr-7p-Vfv" secondAttribute="trailing" id="W3O-Vv-vcg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zLr-7p-Vfv" secondAttribute="trailing" id="XEE-Sm-FzB"/>
+                            <constraint firstItem="zLr-7p-Vfv" firstAttribute="leading" secondItem="kLM-mv-T09" secondAttribute="leading" id="g2C-ox-BHR"/>
+                            <constraint firstItem="zLr-7p-Vfv" firstAttribute="leading" secondItem="kLM-mv-T09" secondAttribute="leadingMargin" id="hBP-7m-ygq"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="zLr-7p-Vfv" secondAttribute="bottom" id="yG7-hu-BwT"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4dX-ET-rSx"/>
+                                <exclude reference="9ce-tZ-xaE"/>
+                                <exclude reference="OvX-hJ-jIh"/>
+                                <exclude reference="XEE-Sm-FzB"/>
+                                <exclude reference="hBP-7m-ygq"/>
+                                <exclude reference="yG7-hu-BwT"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="アプリについて" image="information-icon_32x32px" id="jjT-uI-2iJ"/>
+                    <connections>
+                        <outlet property="_webView" destination="zLr-7p-Vfv" id="pQg-Md-NJU"/>
+                        <outlet property="webView" destination="zLr-7p-Vfv" id="ggn-cW-OhF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dsF-MP-d1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-862" y="-551"/>
+        </scene>
+        <!--登録の仕方-->
+        <scene sceneID="w8M-gp-cYl">
+            <objects>
+                <viewController id="OsR-wl-amc" customClass="HowToRegistViewController" customModule="DateKeyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yOw-dy-fhh"/>
+                        <viewControllerLayoutGuide type="bottom" id="oII-Wi-hc7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f8J-XY-aby">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZ1-LE-Y7O">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yZ1-LE-Y7O" firstAttribute="top" secondItem="yOw-dy-fhh" secondAttribute="bottom" id="HAg-qi-jk3"/>
+                            <constraint firstItem="oII-Wi-hc7" firstAttribute="top" secondItem="yZ1-LE-Y7O" secondAttribute="bottom" id="NBK-ey-0ks"/>
+                            <constraint firstItem="yZ1-LE-Y7O" firstAttribute="leading" secondItem="f8J-XY-aby" secondAttribute="leading" id="YmK-7F-Y0o"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yZ1-LE-Y7O" secondAttribute="trailing" id="fbM-2m-0SN"/>
+                            <constraint firstItem="yZ1-LE-Y7O" firstAttribute="leading" secondItem="f8J-XY-aby" secondAttribute="leadingMargin" id="hNR-0a-EMz"/>
+                            <constraint firstItem="yZ1-LE-Y7O" firstAttribute="top" secondItem="f8J-XY-aby" secondAttribute="top" id="kSC-AP-SOQ"/>
+                            <constraint firstAttribute="trailing" secondItem="yZ1-LE-Y7O" secondAttribute="trailing" id="xal-L6-22t"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="yZ1-LE-Y7O" secondAttribute="bottom" id="z2A-yH-IHS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="HAg-qi-jk3"/>
+                                <exclude reference="fbM-2m-0SN"/>
+                                <exclude reference="hNR-0a-EMz"/>
+                                <exclude reference="z2A-yH-IHS"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="登録の仕方" image="wrench-icon_32x32px" id="pwp-c3-m3y"/>
+                    <connections>
+                        <outlet property="_webView" destination="yZ1-LE-Y7O" id="Gjq-iC-9Gt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3TV-fU-Bft" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-203" y="-551"/>
+        </scene>
+        <!--使い方-->
+        <scene sceneID="u89-Ev-5oZ">
+            <objects>
+                <viewController id="fbi-um-ctO" customClass="HowToUseViewController" customModule="DateKeyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="20e-Pm-JQ9"/>
+                        <viewControllerLayoutGuide type="bottom" id="O7v-oM-VjR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P8z-Xg-Y0k">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJW-dg-AZl">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KJW-dg-AZl" firstAttribute="leading" secondItem="P8z-Xg-Y0k" secondAttribute="leading" id="9Pk-Uh-KRU"/>
+                            <constraint firstItem="KJW-dg-AZl" firstAttribute="leading" secondItem="P8z-Xg-Y0k" secondAttribute="leadingMargin" id="Asg-tV-YtA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KJW-dg-AZl" secondAttribute="trailing" id="FIx-Bc-no6"/>
+                            <constraint firstItem="KJW-dg-AZl" firstAttribute="bottom" secondItem="P8z-Xg-Y0k" secondAttribute="bottomMargin" id="UBr-xF-eMN"/>
+                            <constraint firstItem="O7v-oM-VjR" firstAttribute="top" secondItem="KJW-dg-AZl" secondAttribute="bottom" id="rEm-gI-1mo"/>
+                            <constraint firstAttribute="trailing" secondItem="KJW-dg-AZl" secondAttribute="trailing" id="tOE-UX-maL"/>
+                            <constraint firstItem="KJW-dg-AZl" firstAttribute="top" secondItem="P8z-Xg-Y0k" secondAttribute="topMargin" id="trg-0l-KUl"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Asg-tV-YtA"/>
+                                <exclude reference="FIx-Bc-no6"/>
+                                <exclude reference="UBr-xF-eMN"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="使い方" image="question-mark-icon_32x32px" id="Tnb-FM-goR"/>
+                    <connections>
+                        <outlet property="_webView" destination="KJW-dg-AZl" id="ogY-8b-dM3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vyg-dv-gAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-203" y="239"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="FOb-Qt-7gl">
+            <objects>
+                <tabBarController id="oRx-D7-dnD" customClass="TabBarController" customModule="DateKeyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="bUv-JN-sS9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="gF2-az-lXt" kind="relationship" relationship="viewControllers" id="0oS-ih-gMV"/>
+                        <segue destination="OsR-wl-amc" kind="relationship" relationship="viewControllers" id="3Cd-qq-mFY"/>
+                        <segue destination="fbi-um-ctO" kind="relationship" relationship="viewControllers" id="lgN-39-RxB"/>
+                        <segue destination="BHI-Hj-r8J" kind="relationship" relationship="viewControllers" id="oWM-Sy-k9h"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5b4-hW-n7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-867" y="239"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="information-icon_32x32px" width="25" height="25"/>
+        <image name="question-mark-icon_32x32px" width="25" height="25"/>
+        <image name="settings-02-icon_32x32px" width="25" height="25"/>
+        <image name="wrench-icon_32x32px" width="25" height="25"/>
+    </resources>
+</document>
